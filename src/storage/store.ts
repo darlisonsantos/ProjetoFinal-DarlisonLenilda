@@ -1,0 +1,5 @@
+import {create} from 'zustand';
+import {Ingredient} from '../types';
+// Zustand is declared below through React state context-free store; add zustand to dependencies before installation.
+type State={pantry:Ingredient[];favorites:string[];setPantry:(v:Ingredient[])=>void;setFavorites:(v:string[])=>void;addIngredient:(v:Ingredient)=>void;removeIngredient:(id:string)=>void;toggleFavorite:(id:string)=>void};
+export const useNutriStore=create<State>((set,get)=>({pantry:[],favorites:[],setPantry:(pantry)=>set({pantry}),setFavorites:(favorites)=>set({favorites}),addIngredient:(item)=>set({pantry:[item,...get().pantry]}),removeIngredient:(id)=>set({pantry:get().pantry.filter(x=>x.id!==id)}),toggleFavorite:(id)=>{const f=get().favorites;set({favorites:f.includes(id)?f.filter(x=>x!==id):[...f,id]})}}));

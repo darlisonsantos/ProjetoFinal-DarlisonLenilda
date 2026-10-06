@@ -1,0 +1,3 @@
+export type Ingredient={id:string;name:string;quantity:number;unit:string;category:string;createdAt:string};
+export type Recipe={id:string;name:string;description:string;minutes:number;category:string;ingredients:{name:string;quantity:string}[];steps:string[];calories?:number};
+export type RootStackParamList={Home:undefined;Pantry:undefined;AddIngredient:undefined;Recipes:undefined;RecipeDetail:{recipeId:string};Move:undefined;Profile:undefined};

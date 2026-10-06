@@ -1,0 +1,2 @@
+export const colors={bg:'#F4F8F4',white:'#FFFFFF',green:'#26734D',greenDark:'#175638',mint:'#DDEFE2',lime:'#B9DE73',ink:'#1E3026',muted:'#718078',line:'#E2EAE3',orange:'#E58A48',red:'#C54E4E'};
+export const space={xs:6,sm:10,md:16,lg:22,xl:30};

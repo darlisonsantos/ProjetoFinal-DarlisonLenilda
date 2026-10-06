@@ -1,0 +1,3 @@
+import React from 'react';import {Text,TextInput,View,StyleSheet,TextInputProps} from 'react-native';import {colors} from '../styles/theme';
+export function Field({label,error,...props}:{label:string;error?:string}&TextInputProps){return <View style={s.wrap}><Text style={s.label}>{label}</Text><TextInput placeholderTextColor="#9AA69E" style={s.input} {...props}/>{error?<Text style={s.error}>{error}</Text>:null}</View>}
+const s=StyleSheet.create({wrap:{marginBottom:15},label:{color:colors.ink,fontWeight:'700',marginBottom:7},input:{backgroundColor:colors.white,borderWidth:1,borderColor:colors.line,borderRadius:12,paddingHorizontal:14,paddingVertical:13,fontSize:15,color:colors.ink},error:{color:colors.red,fontSize:12,marginTop:5}});

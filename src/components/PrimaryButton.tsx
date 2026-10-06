@@ -1,0 +1,3 @@
+import React from 'react';import {Pressable,Text,StyleSheet,ViewStyle} from 'react-native';import {colors} from '../styles/theme';
+export function PrimaryButton({label,onPress,secondary=false,style}:{label:string;onPress:()=>void;secondary?:boolean;style?:ViewStyle}){return <Pressable accessibilityRole="button" onPress={onPress} style={({pressed})=>[s.btn,secondary&&s.secondary,style,pressed&&{opacity:.78}]}><Text style={[s.text,secondary&&s.secondaryText]}>{label}</Text></Pressable>}
+const s=StyleSheet.create({btn:{backgroundColor:colors.green,borderRadius:14,paddingVertical:15,paddingHorizontal:18,alignItems:'center'},secondary:{backgroundColor:colors.mint},text:{color:'#fff',fontSize:15,fontWeight:'700'},secondaryText:{color:colors.greenDark}});
